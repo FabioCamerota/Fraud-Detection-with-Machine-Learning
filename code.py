@@ -7,8 +7,10 @@ import random
 driver = GraphDatabase.driver(
   "bolt://localhost:11003")
 
+TOT_TRANSACTIONS = 323489
+
 #useful function for debugging purpose
-def print__ten_transactions():
+def print_ten_transactions():
     cypher_query = '''
         MATCH (t:Transaction)
         RETURN t.id
@@ -20,7 +22,7 @@ def print__ten_transactions():
     for record in results:
         print(record)
 
-#removes one random transaction
+#remove one random transaction
 def remove_one_transaction():
     cypher_query_2 = '''
         MATCH (t:Transaction)
@@ -33,7 +35,6 @@ def remove_one_transaction():
         results = session.write_transaction(
             lambda tx: tx.run(cypher_query_2,tx_id=tx_id).data())
 
-TOT_TRANSACTIONS = 323489
 #remove x% transactions
 def remove_transactions():
     percentage_transactions = TOT_TRANSACTIONS * 0.05 # remove 5% transactions
@@ -423,7 +424,7 @@ def pageRank_secondPartyFraud():
                             name="MYrsa").data())
 
 #run the above functions needed to identify and label first party fraudsters and second party fraudsters
-def runAll():
+def run_all():
     create_new_relationship()
     project_graph()
     write_wcc()
