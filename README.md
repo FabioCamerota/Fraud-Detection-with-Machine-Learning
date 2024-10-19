@@ -1,12 +1,5 @@
 # Fraud detection with Machine Learning and Neo4j
 
-**Students**:
-
-- Fabio Camerota
-- Matteo Santoro
-- Giovanni Castellano
-- Barth Niklas
-
 Electronic money transactions generate large amount of data. <br /> Banks all over the world try to analyse this data to improve their service and provide a better experience to their customers.<br /> 
 This network of transactions can be represented as a graph, which can be easily stored on a graph database such as Neo4j. <br /> 
 One of the most interesting analysis which can be performed on the graph is called fraudsters detection, where it's possible to identify customers who operate for the purpose of scamming people.<br /> 
@@ -17,3 +10,10 @@ Most of the code we wrote is based on Neo4j GDS library, which provides a collec
 <br /> 
 
 **For further details see "Report.pdf"**.
+
+**Authors**:
+
+- Fabio Camerota
+- Matteo Santoro
+- Giovanni Castellano
+- Barth Niklas
