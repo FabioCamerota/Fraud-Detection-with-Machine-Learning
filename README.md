@@ -1,4 +1,4 @@
-# Fraud detection with Neo4j
+# Fraud detection with Machine Learning and Neo4j
 
 **Students**:
 
